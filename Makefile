@@ -1,9 +1,9 @@
 ifdef ICC
 CXX = icpc
-WARN_FLAGS = -O3 -ipo -g -Wall -wd981 -wd383 -wd2259 -Werror # -Weffc++
+WARN_FLAGS = -O3 -ipo -g -Wall -wd981 -wd383 -wd2259 -Werror -Wno-unused-private-field # -Weffc++
 else
 CXX = g++
-WARN_FLAGS = -O3 -g -Wall -Wextra -Wabi -Wctor-dtor-privacy -Wnon-virtual-dtor -Wreorder -Woverloaded-virtual -Wshadow -Wcast-align -Wpointer-arith -Wwrite-strings -Wundef -Wredundant-decls -Werror # -Weffc++
+WARN_FLAGS = -O3 -g -Wall -Wextra -Wabi -Wctor-dtor-privacy -Wno-unused-private-field -Wnon-virtual-dtor -Wreorder -Woverloaded-virtual -Wshadow -Wcast-align -Wpointer-arith -Wwrite-strings -Wundef -Wredundant-decls -Werror # -Weffc++
 endif
 
 BIN = test
